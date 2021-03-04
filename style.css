@@ -1,0 +1,20 @@
+.app{
+    text-align: center;
+    margin-top: 20px;
+}
+button{
+    margin: 20px;
+}
+
+#botInfo> input{
+    width: 200px;
+    position: relative;
+    left: 45%;
+}
+
+#langs{
+    width: auto !important;
+    position: relative;
+    left: 47.5%;
+    margin-bottom: 50px;
+}

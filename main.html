@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Bot</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div class="container">
+            
+            <div class="app"> 
+                <h3>Enter bot url and token </h3> <br>
+                <form id="botInfo">
+                    <label for="botUrl">Bot url:</label>
+                    <input type="text" id="botUrl" name="botUrl"><br><br>
+                    <label for="botToken">Bot  Token:</label>
+                    <input type="text" id="botToken" name="botToken"><br><br>
+                    <h3>Select Language</h3><br>
+                    <select id="langs" name="langs">
+                        <option value="turkish">Turkish</option>
+                        <option value="germany">German</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="english">English</option>
+                    </select>
+                    <!-- <button type='button' id="approveLang" title="onayla">Onayla</button> -->
+                </form>
+
+                <div class="input-single">
+                    <textarea id="note-textarea" placeholder="Yazarak ve ya konuşarak bota istek gönder." rows="6"></textarea>
+                </div>         
+                <button id="start-record-btn" title="Start Recording">Start Recording</button>
+                <!--
+                <button id="pause-record-btn" title="Kaydı Durdur">Kaydı Durdur</button>
+                <button id="sendToBot" title="Bota Gönder">Bota Gönder</button>   -->
+                <p id="recording-instructions"><strong>Start Recording</strong> butonuna tıkla ve konuşmaya başla.</p>
+                <h3>Cevaplar</h3>
+                <ul id="notes">
+                    <li>
+                        <p class="no-notes">No answer.</p>
+                    </li>
+                </ul> 
+
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+
+        
+
+    </body>
+</html>
