@@ -172,7 +172,7 @@ app.post('/sendRequest', async function (req, res) {
     }
 })
 
-/* GOOGLE TEXT TO SPEECH API*/
+/**************** GOOGLE TEXT TO SPEECH API ****************/
 const textToSpeech = require('@google-cloud/text-to-speech');
 const path = require("path");
 
@@ -189,7 +189,7 @@ async function convert(inputText, langCode) {
     const request = {
         input: {text: text},
         // Select the language and SSML voice gender (optional)
-        voice: {languageCode: lng, ssmlGender: 'NEUTRAL', pitch: "2.5"},
+        voice: {languageCode: lng, ssmlGender: 'NEUTRAL', pitch: "0"},
         // select the type of audio encoding
         audioConfig: {audioEncoding: 'MP3'},
     };
@@ -217,7 +217,7 @@ app.get('/speech', async function(req, res) {
         language="de-DE";
     } 
     else if(req.query.lang=="spanish"){
-        language='es-Es';
+        language='es-US';
     } 
     else if(req.query.lang=="english"){
         language="en-US";
